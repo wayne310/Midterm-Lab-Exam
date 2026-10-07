@@ -80,7 +80,7 @@ if (typeof document !== "undefined" && document.getElementById) {
   }
 
   if (helpDeskForm && fullName && email && issueType && confirmDetails && clearBtn && resultSection && resultHeading && resultDetails) {
-    resultSection.hidden = true;
+    resultSection = true;
     clearErrors();
 
     helpDeskForm.addEventListener("submit", function (event) {
@@ -141,13 +141,13 @@ if (typeof document !== "undefined" && document.getElementById) {
       fullName.value = "";
       email.value = "";
       issueType.value = "";
-      confirmDetails.checked = true;
+      confirmDetails.checked = false;
 
       fullNameError.textContent = "";
       emailError.textContent = "";
       issueTypeError.textContent = "";
       confirmDetailsError.textContent = "";
-      showResult();
+
     });
   }
 }
