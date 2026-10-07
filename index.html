@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus IT Help Desk Request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Campus IT Help Desk Request</h1>
+    <p class="intro">Submit a basic technical support request. All fields are checked before the request is accepted.</p>
+
+    <form id="helpDeskForm" novalidate>
+      <div class="field">
+        <label for="fullName">Name</label>
+        <input id="fullName" name="fullName" type="text">
+        <small id="fullNameError" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="text">
+        <small id="emailError" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="issueType">Issue Type</label>
+        <select id="issueType" name="issueType">
+          <option value="">Select an issue type</option>
+          <option value="account">Account / Password Problem</option>
+          <option value="network">Network / Wi-Fi Problem</option>
+        </select>
+        <small id="issueTypeError" class="error"></small>
+      </div>
+
+      <div class="field agreement">
+        <label>
+          <input id="confirmDetails" name="confirmDetails" type="checkbox">
+          I confirm the request details.
+        </label>
+        <small id="confirmDetailsError" class="error"></small>
+      </div>
+
+      <div class="actions">
+        <button id="submitBtn" type="submit">Submit</button>
+        <button id="clearBtn" type="button">Clear</button>
+      </div>
+    </form>
+
+    <section id="resultSection" class="result" hidden>
+      <h2 id="resultHeading"></h2>
+      <div id="resultDetails"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
